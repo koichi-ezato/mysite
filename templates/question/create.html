@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load sample %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,6 +96,11 @@
                             </div><!-- /.col -->
                         {% endfor %}
                     </div><!-- /.row -->
+                    <p>組み込みタグテスト(mul)</p>
+                    {{ 1|mul:10 }}
+                    <br>
+                    <p>組み込みタグテスト(echo_test)</p>
+                    {{ "sample"|echo_test }}
                 </div><!-- /.card-body -->
                 <div class="card-footer">
                     <button type="submit" name="create" class="btn btn-primary"><span class="btn-label"><i class="fa fa-fw fa-pencil"></i></span>登録</button>
