@@ -101,6 +101,11 @@
                     <br>
                     <p>組み込みタグテスト(echo_test)</p>
                     {{ "sample"|echo_test }}
+                    <br>
+                    <p>セッション表示テスト</p>
+                    add_session：{{ request.session.add_session }}<br>
+                    array_session.a：{{ request.session.array_session.a }}<br>
+                    array_session.b：{{ request.session.array_session.b }}
                 </div><!-- /.card-body -->
                 <div class="card-footer">
                     <button type="submit" name="create" class="btn btn-primary"><span class="btn-label"><i class="fa fa-fw fa-pencil"></i></span>登録</button>

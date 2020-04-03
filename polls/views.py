@@ -8,6 +8,12 @@ class QuestionCreateView(generic.CreateView):
     form_class = QuestionForm
     template_name = 'question/create.html'
 
+    def get_context_data(self, **kwargs):
+        # セッションを追加する
+        self.request.session['add_session'] = 'セッション追加'
+        self.request.session['array_session'] = dict(a='配列も', b='セッションに保管できます')
+        return super(QuestionCreateView, self).get_context_data(**kwargs)
+
 
 class QuestionUpdateView(generic.UpdateView):
     model = Question
